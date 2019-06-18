@@ -1,4 +1,5 @@
 package com.codecentric.sample.store.service;
+package com.agiletestware.bumblebee.results;
 
 import com.codecentric.sample.store.model.Item;
 import com.codecentric.sample.store.repository.ItemRepository;
@@ -43,7 +44,9 @@ public class ItemServiceTest {
     }
 
 
-    @Test
+    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
+   public class SomePassSomeFailTest {
+     @Test
     public void getItemNameUpperCase() {
 
         //
@@ -62,6 +65,7 @@ public class ItemServiceTest {
         //
         verify(itemRepository, times(1)).findById("it1");
         assertThat(result, is("ITEM 1"));
+        System.out.println("getItemNameUpperCase passed");
     }
 
     @Test
@@ -90,6 +94,7 @@ public class ItemServiceTest {
         StaticService.getMultiplicator();
 
         assertThat(averagePriceForAllItems, is(2000*5));
+       System.out.println("calculationOfAveragePriceForAllItems passed");
     }
 
     @Test
@@ -115,6 +120,7 @@ public class ItemServiceTest {
         StaticService.readFile(fileName);
 
         assertThat(value, equalTo("Dummy"));
+       System.out.println("readItemDescriptionWithoutIOException passed");
     }
 
     @Test
@@ -140,5 +146,7 @@ public class ItemServiceTest {
         StaticService.readFile(fileName);
 
         assertThat(value, is(""));
+       System.out.println("readItemDescriptionWithIOException passed");
     }
+   }
 }
