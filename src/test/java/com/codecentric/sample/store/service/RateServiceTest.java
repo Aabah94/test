@@ -30,12 +30,12 @@ import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 
 // See http://www.jayway.com/2014/11/29/using-another-junit-runner-with-powermock/
 // for an example with the SpringJUnit4ClassRunner.class
-@Bumblebee(testlab = "Root\\TestBumbleBee", testset = "class_annotations", testplan = "Subject\\TestBumbleBee")
 @RunWith(PowerMockRunner.class)
 @PowerMockRunnerDelegate(Parameterized.class)
 @PrepareForTest({StaticService.class})
 public class RateServiceTest {
 
+    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "class_annotations", testplan = "Subject\\TestBumbleBee")
     @Mock
     private ItemRepository itemRepositoryeMock;
 
