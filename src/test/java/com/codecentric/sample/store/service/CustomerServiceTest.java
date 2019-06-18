@@ -52,7 +52,6 @@ public class CustomerServiceTest {
     }
 
     @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
-    public class SomePassSomeFailTest {
     @Test
     public void testPLZAddressCombination() {
 
@@ -110,5 +109,4 @@ public class CustomerServiceTest {
     }
 }
 
-}
 
