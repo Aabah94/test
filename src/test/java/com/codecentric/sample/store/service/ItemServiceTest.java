@@ -12,7 +12,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
-import com.agiletestware.bumblebee.annotations.BumblebeeJUnitListener;
+import com.agiletestware.bumblebee.annotations.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
