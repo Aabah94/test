@@ -6,6 +6,12 @@ import com.codecentric.sample.store.service.external.HostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.agiletestware.bumblebee.annotations.BooleanValue;
+import com.agiletestware.bumblebee.annotations.Bumblebee;
+import com.agiletestware.bumblebee.annotations.BumblebeeJUnitListener;
+
+
+    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
 @Service
 public class CustomerService {
 
