@@ -12,6 +12,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
+import com.agiletestware.bumblebee.annotations.BumblebeeJUnitListener;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,6 +27,8 @@ import static org.mockito.Mockito.when;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 
+@Bumblebee(testlab = "Root\\TestBumbleBee", testset = "class_annotations", testplan = "Subject\\TestBumbleBee")
+public class SomePassSomeFailTest {
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({StaticService.class})
 public class ItemServiceTest {
@@ -145,4 +148,5 @@ public class ItemServiceTest {
        System.out.println("readItemDescriptionWithIOException passed");
     }
  
+}
 }
