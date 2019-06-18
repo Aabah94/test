@@ -33,9 +33,9 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.when;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.verifyStatic;
-@Bumblebee(testlab = "Root\\TestBumbleBee", testset = "class_annotations", testplan = "Subject\\TestBumbleBee")
 public class CustomerServiceTest {
-
+    
+    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "class_annotations", testplan = "Subject\\TestBumbleBee")
     @Spy
     private AddressService addressService;
 
