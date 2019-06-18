@@ -1,4 +1,5 @@
 package com.codecentric.sample.store.service;
+package com.agiletestware.bumblebee.results;
 
 import com.codecentric.sample.store.model.Customer;
 import com.codecentric.sample.store.model.Item;
@@ -50,7 +51,8 @@ public class CustomerServiceTest {
         MockitoAnnotations.initMocks(this);
     }
 
-
+    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
+    public class SomePassSomeFailTest {
     @Test
     public void testPLZAddressCombination() {
 
@@ -69,6 +71,7 @@ public class CustomerServiceTest {
         // Then
         //
         assertThat(address, is("47891_221B Bakerstreet"));
+        System.out.println("testPLZAddressCombination passed");
     }
 
 
@@ -103,8 +106,9 @@ public class CustomerServiceTest {
         //
         Mockito.verify(addressService, times(1)).updateExternalSystems(any(Customer.class));
         assertThat(address, is("47891_224B Bakerstreet_TestHostValue"));
+        System.out.println("testPLZAddressCombinationIncludingHostValue passed");
     }
 }
 
-
+}
 
