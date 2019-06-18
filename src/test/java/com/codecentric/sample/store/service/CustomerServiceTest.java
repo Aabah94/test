@@ -51,7 +51,7 @@ public class CustomerServiceTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
+    @Bumblebee(testlab = "Root\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\TestBumbleBee")
     @Test
     public void testPLZAddressCombination() {
 
