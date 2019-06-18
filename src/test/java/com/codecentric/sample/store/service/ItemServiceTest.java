@@ -44,8 +44,8 @@ public class ItemServiceTest {
     }
 
 
-    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
-   public class SomePassSomeFailTest {
+    @Bumblebee(testlab = "Root\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\TestBumbleBee")
+
      @Test
     public void getItemNameUpperCase() {
 
@@ -148,5 +148,5 @@ public class ItemServiceTest {
         assertThat(value, is(""));
        System.out.println("readItemDescriptionWithIOException passed");
     }
-   }
+ 
 }
