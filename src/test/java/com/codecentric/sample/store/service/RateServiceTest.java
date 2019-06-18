@@ -93,3 +93,4 @@ public class RateServiceTest {
        System.out.println("rateCalculationTest passed");
     }
 }
+}
