@@ -10,6 +10,13 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.List;
 
+
+import com.agiletestware.bumblebee.annotations.BooleanValue;
+import com.agiletestware.bumblebee.annotations.Bumblebee;
+import com.agiletestware.bumblebee.annotations.BumblebeeJUnitListener;
+
+
+    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
 @Service
 public class ItemService {
 
