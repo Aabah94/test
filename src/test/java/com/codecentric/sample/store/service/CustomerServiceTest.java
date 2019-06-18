@@ -1,5 +1,4 @@
 package com.codecentric.sample.store.service;
-package com.agiletestware.bumblebee.results;
 
 import com.codecentric.sample.store.model.Customer;
 import com.codecentric.sample.store.model.Item;
@@ -51,7 +50,6 @@ public class CustomerServiceTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Bumblebee(testlab = "Root\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\TestBumbleBee")
     @Test
     public void testPLZAddressCombination() {
 
