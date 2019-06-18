@@ -28,7 +28,7 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 
 @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "class_annotations", testplan = "Subject\\TestBumbleBee")
-public class SomePassSomeFailTest {
+
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({StaticService.class})
 public class ItemServiceTest {
@@ -147,6 +147,4 @@ public class ItemServiceTest {
         assertThat(value, is(""));
        System.out.println("readItemDescriptionWithIOException passed");
     }
- 
-}
 }
