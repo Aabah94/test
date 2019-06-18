@@ -15,6 +15,8 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.powermock.modules.junit4.PowerMockRunnerDelegate;
 
+import com.agiletestware.bumblebee.annotations.BumblebeeJUnitListener;
+
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -28,7 +30,8 @@ import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 
 // See http://www.jayway.com/2014/11/29/using-another-junit-runner-with-powermock/
 // for an example with the SpringJUnit4ClassRunner.class
-
+@Bumblebee(testlab = "Root\\TestBumbleBee", testset = "class_annotations", testplan = "Subject\\TestBumbleBee")
+public class SomePassSomeFailTest {
 @RunWith(PowerMockRunner.class)
 @PowerMockRunnerDelegate(Parameterized.class)
 @PrepareForTest({StaticService.class})
@@ -89,4 +92,5 @@ public class RateServiceTest {
         assertThat(result, is(expected));
        System.out.println("rateCalculationTest passed");
     }
+}
 }
