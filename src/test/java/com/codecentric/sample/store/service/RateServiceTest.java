@@ -64,8 +64,8 @@ public class RateServiceTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
-   public class SomePassSomeFailTest {
+    @Bumblebee(testlab = "Root\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\TestBumbleBee")
+
 
     @Test
     public void rateCalculationTest() {
@@ -92,5 +92,4 @@ public class RateServiceTest {
         assertThat(result, is(expected));
        System.out.println("rateCalculationTest passed");
     }
-}
 }
