@@ -20,7 +20,9 @@ import org.mockito.stubbing.Answer;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import com.agiletestware.bumblebee.annotations.*;
+import com.agiletestware.bumblebee.annotations.BooleanValue;
+import com.agiletestware.bumblebee.annotations.Bumblebee;
+import com.agiletestware.bumblebee.annotations.BumblebeeJUnitListener;
 import java.util.ArrayList;
 import java.util.List;
 
