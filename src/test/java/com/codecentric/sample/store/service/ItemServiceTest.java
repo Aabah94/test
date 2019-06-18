@@ -27,19 +27,19 @@ import static org.mockito.Mockito.when;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 
-@Bumblebee(testlab = "Root\\TestBumbleBee", testset = "class_annotations", testplan = "Subject\\TestBumbleBee")
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({StaticService.class})
 public class ItemServiceTest {
 
+    @Bumblebee(testlab = "Root\\TestBumbleBee", testset = "TestBumbleBee", testplan = "Subject\\TestBumbleBee")
     @Mock
     private ItemRepository itemRepository;
 
     @InjectMocks
     private ItemService itemService;
 
-
+    
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
